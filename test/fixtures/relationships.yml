@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  teacher_id: 1
+  student_id: 1
+  relationship_type: MyString
+
+two:
+  teacher_id: 1
+  student_id: 1
+  relationship_type: MyString

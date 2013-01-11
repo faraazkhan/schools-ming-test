@@ -1,0 +1,25 @@
+<%= form_for(@home_room) do |f| %>
+  <% if @home_room.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@home_room.errors.count, "error") %> prohibited this home_room from being saved:</h2>
+
+      <ul>
+      <% @home_room.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :teacher_id %><br />
+    <%= f.select :teacher_id, Teacher.all.map(&:name) %>
+  </div>
+  <div class="field">
+    <%= f.label :homeroom_number %><br />
+    <%= f.number_field :homeroom_number %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
